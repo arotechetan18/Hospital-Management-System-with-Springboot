@@ -25,8 +25,8 @@ public class Patient {
 	@Column(name="blood")
 	private String blood;
 	
-	@Column(name="prescripton")
-	private String prescripton;
+	@Column(name="prescription")
+	private String prescription;
 	
 	@Column(name="dose")
 	private String dose;
@@ -69,12 +69,14 @@ public class Patient {
 		this.blood = blood;
 	}
 
-	public String getPrescripton() {
-		return prescripton;
+
+
+	public String getPrescription() {
+		return prescription;
 	}
 
-	public void setPrescripton(String prescripton) {
-		this.prescripton = prescripton;
+	public void setPrescription(String prescription) {
+		this.prescription = prescription;
 	}
 
 	public String getDose() {
@@ -106,14 +108,14 @@ public class Patient {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Patient(Long id, String name, String age, String blood, String prescripton, String dose, String fees,
+	public Patient(Long id, String name, String age, String blood, String prescription, String dose, String fees,
 			String urgency) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.blood = blood;
-		this.prescripton = prescripton;
+		this.prescription = prescription;
 		this.dose = dose;
 		this.fees = fees;
 		this.urgency = urgency;
