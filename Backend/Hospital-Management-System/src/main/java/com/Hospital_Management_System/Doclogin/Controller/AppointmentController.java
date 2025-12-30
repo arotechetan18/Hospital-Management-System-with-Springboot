@@ -1,4 +1,4 @@
-package com.Hospital_Management_System.controller;
+package com.Hospital_Management_System.Doclogin.Controller;
 
 import java.util.List;
 
@@ -10,36 +10,31 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Hospital_Management_System.entity.Patient;
-import com.Hospital_Management_System.repository.PatientRepository;
+import com.Hospital_Management_System.Doclogin.entity.Appointment;
+import com.Hospital_Management_System.Doclogin.repository.AppointmentRepository;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/api/v1")
-public class PatientController {
-
+@RequestMapping("/api/v2")
+public class AppointmentController {
+	
 	@Autowired
-	private PatientRepository patientRepository;
+	private AppointmentRepository appointmentRepository;
 
-	public PatientController(PatientRepository patientRepository) {
+	public AppointmentController(AppointmentRepository appointmentRepository) {
 		super();
 		// TODO Auto-generated constructor stub
 	}
 	
 	@PostMapping("/insert")
-	public Patient createPatient(@RequestBody Patient patient) {
-		return patientRepository.save(patient);
+	public Appointment createAppoinment( @RequestBody Appointment appointment) {
 		
+		return appointmentRepository.save(appointment);
 	}
-	
 	
 	@GetMapping
-	public List<Patient>getAllPatient(){
-		
-		return patientRepository.findAll();
+	public List<Appointment>getAppointments()
+	{
+		return appointmentRepository.findAll(); 
 	}
-	
-	
-
-	
 }
