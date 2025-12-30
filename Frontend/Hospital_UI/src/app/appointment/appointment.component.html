@@ -1,0 +1,61 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LifeSpring Hospitals</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/admin">
+            Admin Dashboard
+          </a>
+        </li>
+      </ul>
+
+      <button class="btn btn-logout">
+        <a routerLink="/home">Logout</a>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container dashboard">
+  <h2>Appointment Dashboard</h2>
+
+  <p class="welcome-text">
+    <marquee>
+      Welcome to Appointment Dashboard. Here you can view all patient appointments.
+    </marquee>
+  </p>
+ <h1 class="queue-title">Current Patient List in the Queue</h1>
+
+
+  <table class="table table-striped custom-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Patient Name</th>
+        <th>Age</th>
+        <th>Symptoms</th>
+        <th>Contact No</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let appointment of appointments">
+        <td>{{ appointment.id }}</td>
+        <td>{{ appointment.name }}</td>
+        <td>{{ appointment.age }}</td>
+        <td>{{ appointment.symptoms }}</td>
+        <td>{{ appointment.number }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,64 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LifeSpring Hospitals</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/appointmentlist">
+            Appointments
+          </a>
+        </li>
+      </ul>
+
+      <button class="btn btn-logout">
+        <a routerLink="/home">Logout</a>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="container dashboard">
+  <h2>Admin Dashboard</h2>
+
+  <p class="welcome-text">
+    <marquee>
+      Welcome to Admin Dashboard. Please find the patient list below!!
+      Click Appointments to view and update Appointments.
+    </marquee>
+  </p>
+
+  <table class="table table-striped custom-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Blood</th>
+        <th>Prescription</th>
+        <th>Dose</th>
+        <th>Urgency</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{patient.id}}</td>
+        <td>{{patient.name}}</td>
+        <td>{{patient.age}}</td>
+        <td>{{patient.blood}}</td>
+        <td>{{patient.prescription}}</td>
+        <td>{{patient.dose}}</td>
+        <td>{{patient.urgency}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
