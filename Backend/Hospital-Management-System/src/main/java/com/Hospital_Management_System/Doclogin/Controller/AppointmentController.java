@@ -28,7 +28,7 @@ public class AppointmentController {
 	
 	@PostMapping("/insert")
 	public Appointment createAppoinment( @RequestBody Appointment appointment) {
-		
+		appointment.setId(null);
 		return appointmentRepository.save(appointment);
 	}
 	
