@@ -7,6 +7,7 @@ export class Patient {
     prescription:string="";
     dose:string=""; 
     urgency:string="";
+    fees:string="";
 }
 
 
