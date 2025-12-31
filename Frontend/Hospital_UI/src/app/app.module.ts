@@ -9,6 +9,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { FormsModule } from '@angular/forms';
+import { HomepageComponent } from './homepage/homepage.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { FormsModule } from '@angular/forms';
     AdmindashboardComponent,
     AppointmentComponent,
     CreateAppointmentComponent,
+    HomepageComponent,
+    DoctorDashboardComponent,
 
   ],
   imports: [

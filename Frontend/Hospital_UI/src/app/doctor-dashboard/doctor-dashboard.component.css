@@ -1,0 +1,108 @@
+/* ===== Global ===== */
+body {
+  background-color: #f4f6f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.navbar-brand {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.nav-link {
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+/* ===== Container ===== */
+.container {
+  background: #ffffff;
+  margin-top: 25px;
+  padding: 20px 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* ===== Headings ===== */
+h2 {
+  font-weight: bold;
+  color: #343a40;
+}
+
+hr {
+  margin: 15px 0;
+}
+
+/* ===== Marquee Text ===== */
+marquee {
+  font-weight: 500;
+}
+
+/* ===== Table Wrapper ===== */
+.tableFixHead {
+  margin-top: 20px;
+  max-height: 420px;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+/* ===== Table ===== */
+.table {
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+.table thead th {
+  position: sticky;
+  top: 0;
+  background-color: #343a40;
+  color: #ffffff;
+  text-align: center;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.table tbody td {
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+/* ===== Row Hover Effect ===== */
+.table tbody tr:hover {
+  background-color: #f1f3f5;
+  cursor: pointer;
+}
+
+/* ===== Buttons ===== */
+.btn-danger {
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 18px;
+  }
+
+  .table thead {
+    font-size: 13px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}
