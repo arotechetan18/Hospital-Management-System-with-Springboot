@@ -1,4 +1,4 @@
-/* Navbar */
+
 .custom-navbar {
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   padding: 12px 20px;
@@ -22,7 +22,7 @@
   color: #00eaff !important;
 }
 
-/* Logout Button */
+
 .btn-logout {
   background-color: #dc3545;
   border-radius: 20px;
@@ -38,7 +38,7 @@
   background-color: #b02a37;
 }
 
-/* Dashboard */
+
 .dashboard {
   margin-top: 30px;
 }
@@ -56,7 +56,7 @@
   margin-bottom: 20px;
 }
 
-/* Table */
+
 .custom-table {
   border-radius: 10px;
   overflow: hidden;

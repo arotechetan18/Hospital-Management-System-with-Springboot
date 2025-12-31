@@ -13,6 +13,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
+          
+          <a class="nav-link active" routerLink="/create-appointment">
+           Add Appointment
+          </a>
+        </li>
+        <li class="nav-item">
+          
           <a class="nav-link active" routerLink="/admin">
             Admin Dashboard
           </a>
@@ -45,6 +52,7 @@
         <th>Age</th>
         <th>Symptoms</th>
         <th>Contact No</th>
+        <th>Action</th>
       </tr>
     </thead>
 
@@ -55,6 +63,9 @@
         <td>{{ appointment.age }}</td>
         <td>{{ appointment.symptoms }}</td>
         <td>{{ appointment.number }}</td>
+        <td>
+          <button (click)="delete(appointment.id)" class="btn btn-danger">Delete</button>
+        </td>
       </tr>
     </tbody>
   </table>
