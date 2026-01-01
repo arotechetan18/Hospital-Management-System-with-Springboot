@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 
@@ -7,7 +7,7 @@ import { PatientService } from '../patient.service';
   templateUrl: './doctor-dashboard.component.html',
   styleUrl: './doctor-dashboard.component.css'
 })
-export class DoctorDashboardComponent {
+export class DoctorDashboardComponent implements OnInit {
 
 constructor(private patienService:PatientService){}
 

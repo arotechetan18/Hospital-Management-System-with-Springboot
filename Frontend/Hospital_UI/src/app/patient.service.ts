@@ -10,9 +10,14 @@ export class PatientService {
 
   constructor(private httpClient:HttpClient) { }
 
-  private baseUrl="http://localhost:8080/api/v1"
+  private baseUrl="http://localhost:8080/api/v1/patients"
 
   getPatientList():Observable<Patient[]>{
     return this.httpClient.get<Patient[]>(`${this.baseUrl}`)
+  }
+
+  createPatient(patient:Patient):Observable<Patient>{
+
+    return this.httpClient.post<Patient>(`${this.baseUrl}`,patient);
   }
 }

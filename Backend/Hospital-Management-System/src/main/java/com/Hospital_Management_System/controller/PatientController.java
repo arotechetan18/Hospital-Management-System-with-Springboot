@@ -26,14 +26,14 @@ public class PatientController {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@PostMapping("/insert")
+	@PostMapping("/patients")
 	public Patient createPatient(@RequestBody Patient patient) {
 		return patientRepository.save(patient);
 		
 	}
 	
 	
-	@GetMapping
+	@GetMapping("/patients")
 	public List<Patient>getAllPatient(){
 		
 		return patientRepository.findAll();
