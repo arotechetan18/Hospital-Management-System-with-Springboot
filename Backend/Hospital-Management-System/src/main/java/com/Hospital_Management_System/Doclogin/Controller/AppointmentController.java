@@ -35,7 +35,7 @@ public class AppointmentController {
 	
 	@PostMapping("/appointments")
 	public Appointment createAppoinment( @RequestBody Appointment appointment) {
-		appointment.setId(null);
+		
 		return appointmentRepository.save(appointment);
 	}
 	

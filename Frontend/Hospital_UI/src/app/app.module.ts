@@ -9,6 +9,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
 import { FormsModule } from '@angular/forms';
+import { HomepageComponent } from './homepage/homepage.component';
+import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
+import { CreatePatientComponent } from './create-patient/create-patient.component';
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +20,10 @@ import { FormsModule } from '@angular/forms';
     AdmindashboardComponent,
     AppointmentComponent,
     CreateAppointmentComponent,
+    HomepageComponent,
+    DoctorDashboardComponent,
+    CreatePatientComponent,
+    MedicineListComponent,
 
   ],
   imports: [
