@@ -26,13 +26,13 @@ public class AppointmentController {
 		// TODO Auto-generated constructor stub
 	}
 	
-	@PostMapping("/insert")
+	@PostMapping("/appointments")
 	public Appointment createAppoinment( @RequestBody Appointment appointment) {
-		appointment.setId(null);
+		
 		return appointmentRepository.save(appointment);
 	}
 	
-	@GetMapping
+	@GetMapping("/appointments")
 	public List<Appointment>getAppointments()
 	{
 		return appointmentRepository.findAll(); 

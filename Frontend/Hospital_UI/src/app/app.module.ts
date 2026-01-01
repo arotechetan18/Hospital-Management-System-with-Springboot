@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
+import { MedicineListComponent } from './medicine-list/medicine-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CreatePatientComponent } from './create-patient/create-patient.componen
     HomepageComponent,
     DoctorDashboardComponent,
     CreatePatientComponent,
+    MedicineListComponent,
 
   ],
   imports: [
