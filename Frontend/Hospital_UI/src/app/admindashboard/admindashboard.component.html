@@ -42,10 +42,9 @@
         <th>ID</th>
         <th>Name</th>
         <th>Age</th>
-        <th>Blood</th>
-        <th>Prescription</th>
-        <th>Dose</th>
+      <th>fees</th>
         <th>Urgency</th>
+        <th>Action</th>
       </tr>
     </thead>
 
@@ -54,10 +53,9 @@
         <td>{{patient.id}}</td>
         <td>{{patient.name}}</td>
         <td>{{patient.age}}</td>
-        <td>{{patient.blood}}</td>
-        <td>{{patient.prescription}}</td>
-        <td>{{patient.dose}}</td>
+      <td>{{patient.fees}}</td>
         <td>{{patient.urgency}}</td>
+        <td><button (click)="delete(patient.id)" class="btn btn-danger">Delete</button></td>
       </tr>
     </tbody>
   </table>

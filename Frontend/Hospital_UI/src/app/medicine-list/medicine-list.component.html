@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LifeSpring Hospitals</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          
+          <a class="nav-link active" routerLink="/doctordashboard">
+           back
+          </a>
+        </li>
+       
+      </ul>
+
+     
+    </div>
+  </div>
+</nav>
+<table class="table table-striped">
+
+    <thead class="table-header">
+        <tr>
+            <th>ID</th>
+            <th>DrugName</th>
+            <th>stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let medicine of medicines">
+
+            <td>{{medicine.id}}</td>
+            <td>{{medicine.drugname}}</td>
+            <td>{{medicine.stock}}</td>
+        </tr>
+    </tbody>
+</table>

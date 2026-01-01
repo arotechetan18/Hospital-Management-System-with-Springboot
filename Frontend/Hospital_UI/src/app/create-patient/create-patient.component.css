@@ -1,0 +1,55 @@
+
+form {
+  max-width: 600px;     
+  margin: 20px auto;
+  padding: 20px;        
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.form-group {
+  margin-bottom: 16px;  
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form-control {
+  padding: 8px 10px;    
+  font-size: 15px;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+}
+
+.custom-navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 500;
+}
