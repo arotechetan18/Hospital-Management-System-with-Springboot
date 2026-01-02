@@ -48,11 +48,10 @@
              <th>ID</th>
         <th>Name</th>
         <th>Age</th>
-      <th>dose</th>
-      <th>prescription</th>
       <th>Blood type</th>
         <th>Urgency</th>
         <th>Fees</th>
+        <th>Action</th>
     
         </tr>
     </thead>
@@ -60,11 +59,12 @@
   <td>{{patient.id}}</td>
   <td>{{patient.name}}</td>
   <td>{{patient.age}}</td>
-  <td>{{patient.dose}}</td>
-  <td>{{patient.prescription}}</td>
   <td>{{patient.blood}}</td>
   <td>{{patient.urgency}}</td>
   <td>{{patient.fees}}</td>
+  <td>
+    <button (click)="update(patient.id)" class="btn btn-success">Update</button>
+  </td>
 </tr>
 
     </tbody>

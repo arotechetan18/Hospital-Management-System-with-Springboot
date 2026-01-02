@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-doctor-dashboard',
@@ -9,7 +10,7 @@ import { PatientService } from '../patient.service';
 })
 export class DoctorDashboardComponent implements OnInit {
 
-constructor(private patienService:PatientService){}
+constructor(private patienService:PatientService,private router:Router){}
 
   patients:Patient[]=[];
 
@@ -24,5 +25,10 @@ constructor(private patienService:PatientService){}
       this.patients=data;
     })
 
+  }
+
+  update(id?:number){
+
+    this.router.navigate(['update-patient',id])
   }
 }
