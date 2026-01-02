@@ -28,7 +28,7 @@ export class CreatePatientComponent {
     })
   }
   onSubmit(){
-alert("from is submittted")
+
     this.savePatients();
 
   }

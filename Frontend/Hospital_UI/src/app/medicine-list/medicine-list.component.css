@@ -18,8 +18,59 @@
   margin-right: 15px;
 }
 
+
 h2 {
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+
+a {
+  display: block;
+  text-align: center;
   margin-bottom: 15px;
-  font-size: 22px;
-  font-weight: 500;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.tableFixHead {
+  margin: 20px auto;
+  width: 90%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+table {
+  margin: 0;
+}
+
+
+.table-header {
+  font-weight: 600;
+}
+
+
+.table th,
+.table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+  transition: 0.3s;
+}
+
+
+@media (max-width: 768px) {
+  .tableFixHead {
+    width: 100%;
+  }
+
+  .custom-navbar .navbar-brand {
+    font-size: 16px;
+  }
 }
