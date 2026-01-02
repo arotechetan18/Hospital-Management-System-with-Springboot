@@ -36,6 +36,7 @@ public class PatientController {
 	
 	@PostMapping("/patients")
 	public Patient createPatient(@RequestBody Patient patient) {
+		patient.setId(null);
 		return patientRepository.save(patient);
 		
 	}
@@ -89,6 +90,19 @@ public class PatientController {
 		return ResponseEntity.ok(savePatient);
 	}
 	
+	@DeleteMapping("patients/{id}")
+	public ResponseEntity<Map<String,Boolean>>deletePatient(@PathVariable long id) throws AttributeNotFoundException{
+		
+Patient patient= patientRepository.findById(id).orElseThrow(()->new AttributeNotFoundException("Patient not found with id"));
 
+patientRepository.delete(patient);
+
+Map<String,Boolean> response=new HashMap<String, Boolean>();
+response.put("Deleted",Boolean.TRUE);	
+
+return ResponseEntity.ok(response);
+}
+	
+ 
 	
 }
