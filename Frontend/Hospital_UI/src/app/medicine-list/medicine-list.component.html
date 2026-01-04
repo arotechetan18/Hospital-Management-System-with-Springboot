@@ -42,7 +42,8 @@
         <tr>
             <th>ID</th>
             <th>DrugName</th>
-            <th>stock</th>
+            <th>Stock</th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -51,6 +52,10 @@
             <td>{{medicine.id}}</td>
             <td>{{medicine.drugname}}</td>
             <td>{{medicine.stock}}</td>
+            <td>
+              <button class="btn btn-info" (click)="update(medicine.id!)">Update</button>
+               <button class="btn btn-danger" style="margin-left: 10px;" (click)="deleteMedicine(medicine.id!)">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>
