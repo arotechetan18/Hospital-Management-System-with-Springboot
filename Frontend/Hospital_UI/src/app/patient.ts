@@ -1,6 +1,6 @@
 export class Patient {
 
-    id?:number
+    id:number=0;
     name:string="";
     age:string="";
     blood:string="";

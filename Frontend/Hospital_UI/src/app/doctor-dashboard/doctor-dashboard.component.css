@@ -84,10 +84,16 @@ marquee {
 .btn-danger {
   padding: 6px 16px;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 16px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
+.btn-success{
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+}
 @media (max-width: 768px) {
   .navbar-brand {
     font-size: 18px;
