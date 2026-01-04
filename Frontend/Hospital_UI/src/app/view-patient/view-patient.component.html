@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">LifeSpring Hospitals</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          
+          <a class="nav-link active" routerLink="/doctordashboard">
+           back
+          </a>
+        </li>
+       
+      </ul>
+
+     
+    </div>
+  </div>
+</nav><div class="patient-card">
+  <h3 class="title">Patient Details</h3>
+
+  <div class="detail">
+    <span>Id</span>
+    <b>{{ patient.id }}</b>
+  </div>
+
+  <div class="detail">
+    <span>Name</span>
+    <b>{{ patient.name }}</b>
+  </div>
+
+
+  <div class="detail">
+    <span>Age</span>
+    <b>{{ patient.age }}</b>
+  </div>
+
+  <div class="detail">
+    <span>Blood Group</span>
+    <b>{{ patient.blood }}</b>
+  </div>
+
+  <div class="detail">
+    <span>Dose</span>
+    <b>{{ patient.dose }}</b>
+  </div>
+
+  <div class="detail">
+    <span>Fees</span>
+    <b>₹ {{ patient.fees }}</b>
+  </div>
+
+  <div class="detail">
+    <span>Prescription</span>
+    <b>{{ patient.prescription }}</b>
+  </div>
+
+  <div class="detail">
+    <span>Urgency</span>
+    <b class="urgency">{{ patient.urgency }}</b>
+  </div>
+</div>

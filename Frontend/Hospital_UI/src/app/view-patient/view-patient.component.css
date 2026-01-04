@@ -1,0 +1,62 @@
+.patient-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #0d6efd;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.detail span {
+  color: #555;
+}
+
+.detail b {
+  color: #000;
+}
+
+.urgency {
+  color: #dc3545;
+  font-weight: 600;
+}
+
+
+.custom-navbar {
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  padding: 12px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: white !important;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 500;
+}

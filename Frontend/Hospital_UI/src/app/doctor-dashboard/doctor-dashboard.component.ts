@@ -14,6 +14,7 @@ constructor(private patienService:PatientService,private router:Router){}
 
   patients:Patient[]=[];
 
+  id:number=0
   ngOnInit():void
   {
     this.getPatients();
@@ -31,4 +32,17 @@ constructor(private patienService:PatientService,private router:Router){}
 
     this.router.navigate(['update-patient',id])
   }
+
+deletePatient(id: number) {
+  this.patienService.delete(id).subscribe(() => {
+    this.getPatients();
+  });
+}
+
+view(id:number){
+
+  this.router.navigate(['view-patient',id])
+}
+
+
 }
