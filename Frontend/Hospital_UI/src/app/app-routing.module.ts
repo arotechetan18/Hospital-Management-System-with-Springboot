@@ -11,6 +11,7 @@ import { CreateMedicineComponent } from './create-medicine/create-medicine.compo
 import { UpdatePatientComponent } from './update-patient/update-patient.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
+import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
 
 const routes: Routes = [
  { path:'admin',component:AdmindashboardComponent},
@@ -24,7 +25,8 @@ const routes: Routes = [
  {path:'create-medicine',component:CreateMedicineComponent},
  {path:'update-patient/:id',component:UpdatePatientComponent},
  {path:'view-patient/:id',component:ViewPatientComponent},
- {path:'update-medicine/:id',component:UpdateMedicineComponent}
+ {path:'update-medicine/:id',component:UpdateMedicineComponent},
+ {path:'doctor-login',component:DoctorLoginComponent}
 ];
 
 @NgModule({
