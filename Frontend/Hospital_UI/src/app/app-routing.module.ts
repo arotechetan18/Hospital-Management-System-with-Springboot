@@ -12,11 +12,13 @@ import { UpdatePatientComponent } from './update-patient/update-patient.componen
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminauthGuardService } from './adminauth-guard.service';
 
 const routes: Routes = [
- { path:'admin',component:AdmindashboardComponent},
- {path:'appointmentlist',component:AppointmentComponent},
- {path:'create-appointment',component:CreateAppointmentComponent},
+ { path:'admin',component:AdmindashboardComponent,canActivate:[AdminauthGuardService]},
+ {path:'appointmentlist',component:AppointmentComponent,canActivate:[AdminauthGuardService]},
+ {path:'create-appointment',component:CreateAppointmentComponent,canActivate:[AdminauthGuardService]},
  {path:'home',component:HomepageComponent},
  {path:'',redirectTo:'home',pathMatch:'full'},
  {path:'doctordashboard',component:DoctorDashboardComponent},
@@ -26,7 +28,8 @@ const routes: Routes = [
  {path:'update-patient/:id',component:UpdatePatientComponent},
  {path:'view-patient/:id',component:ViewPatientComponent},
  {path:'update-medicine/:id',component:UpdateMedicineComponent},
- {path:'doctor-login',component:DoctorLoginComponent}
+ {path:'doctor-login',component:DoctorLoginComponent},
+ {path:'adminlogin',component:AdminloginComponent}
 ];
 
 @NgModule({
