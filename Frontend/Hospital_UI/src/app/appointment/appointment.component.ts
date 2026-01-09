@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppointmentService } from '../appointment.service';
 import { Appointment } from '../appointment';
+import { AuthService } from '../auth-service.service';
 
 @Component({
   selector: 'app-appointment',
@@ -17,7 +18,7 @@ export class AppointmentComponent implements OnInit{
     this.getAppointments();
   }
 
-  constructor(private appoinmentService:AppointmentService){}
+  constructor(private appoinmentService:AppointmentService,private authService: AuthService){}
 
   getAppointments(){
     this.appoinmentService.getAllappointments().subscribe(data=>
@@ -30,6 +31,9 @@ export class AppointmentComponent implements OnInit{
       console.log(data);
       this.getAppointments();
     })
+  }
+  logout() {
+    this.authService.logout();
   }
 
 }

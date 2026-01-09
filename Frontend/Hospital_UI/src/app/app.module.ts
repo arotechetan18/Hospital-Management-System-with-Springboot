@@ -8,7 +8,7 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
 import { HttpClientModule } from '@angular/common/http';
 import { AppointmentComponent } from './appointment/appointment.component';
 import { CreateAppointmentComponent } from './create-appointment/create-appointment.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { DoctorDashboardComponent } from './doctor-dashboard/doctor-dashboard.component';
 import { CreatePatientComponent } from './create-patient/create-patient.component';
@@ -17,8 +17,8 @@ import { CreateMedicineComponent } from './create-medicine/create-medicine.compo
 import { UpdatePatientComponent } from './update-patient/update-patient.component';
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
-import { DoctorLoginComponent } from './doctor-login/doctor-login.component';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
+
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -35,8 +35,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     UpdatePatientComponent,
     ViewPatientComponent,
     UpdateMedicineComponent,
-    DoctorLoginComponent,
-    AdminloginComponent,
+    LoginComponent,
   
 
   ],
@@ -44,7 +43,7 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

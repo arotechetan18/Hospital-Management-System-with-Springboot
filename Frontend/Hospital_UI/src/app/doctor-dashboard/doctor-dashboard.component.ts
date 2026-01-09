@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Patient } from '../patient';
 import { PatientService } from '../patient.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth-service.service';
+
 
 @Component({
   selector: 'app-doctor-dashboard',
@@ -10,7 +12,7 @@ import { Router } from '@angular/router';
 })
 export class DoctorDashboardComponent implements OnInit {
 
-constructor(private patienService:PatientService,private router:Router){}
+constructor(private patienService:PatientService,private router:Router,private authService:AuthService){}
 
   patients:Patient[]=[];
 
@@ -42,6 +44,11 @@ deletePatient(id: number) {
 view(id:number){
 
   this.router.navigate(['view-patient',id])
+}
+
+
+logout() {
+  this.authService.logout();
 }
 
 
