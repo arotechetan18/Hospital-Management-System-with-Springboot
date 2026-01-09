@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../patient.service';
 import { Patient } from '../patient';
-import { AdminAuthService } from '../admin-auth.service';
 import { Router } from '@angular/router';
+import { AuthService } from '../auth-service.service';
 
 @Component({
   selector: 'app-admindashboard',
@@ -13,7 +13,7 @@ export class AdmindashboardComponent implements OnInit {
 
 patients:Patient[]=[];
 
-  constructor(private patientService:PatientService,private adminauthService:AdminAuthService,private router:Router){}
+  constructor(private patientService:PatientService,private router:Router,private authService:AuthService){}
 
   ngOnInit():void{
     this.getPatients();
@@ -33,10 +33,9 @@ patients:Patient[]=[];
 
     }
 
-    logout(){
-this.adminauthService.logout();
-this.router.navigate(['home'])
-
-    }
+   
+  logout() {
+    this.authService.logout();
+  }
   
 }
