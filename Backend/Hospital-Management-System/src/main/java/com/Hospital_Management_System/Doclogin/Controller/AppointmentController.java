@@ -30,7 +30,7 @@ public class AppointmentController {
 
 	public AppointmentController(AppointmentRepository appointmentRepository) {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	@PostMapping("/appointments")

@@ -1,6 +1,6 @@
 package com.Hospital_Management_System.controller;
 
-// HE IMPORTS LAKSHAT DYA
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,24 +33,24 @@ public class UserLoginController {
                 )
             );
 
-            // Security Context set करा
+            // Security Context 
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
             // Role fetch
             String role = authentication.getAuthorities().iterator().next().getAuthority(); // ROLE_ADMIN / ROLE_DOCTOR
             role = role.replace("ROLE_", "");
 
-            // Response तयार करा
+            // Response 
             Map<String, String> response = new HashMap<>();
             response.put("message", "Login Successful");
             response.put("username", loginRequest.getUsername());
-            response.put("userType", role); // Angular ला PATHVAYCHE
+            response.put("userType", role); 
 
-            System.out.println("✅ User authenticated: " + loginRequest.getUsername() + " with role: " + role);
+            System.out.println("User authenticated: " + loginRequest.getUsername() + " with role: " + role);
             return ResponseEntity.ok(response);
 
         } catch (Exception e) {
-            System.out.println("❌ Authentication Failed: " + e.getMessage());
+            System.out.println("Authentication Failed: " + e.getMessage());
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid username or password");
         }
     }

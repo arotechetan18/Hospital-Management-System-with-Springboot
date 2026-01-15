@@ -23,7 +23,7 @@ public class DataInitializer implements CommandLineRunner {
             User admin = new User();
             admin.setUsername("admin");
             admin.setPassword(passwordEncoder.encode("admin123"));
-            admin.setType("ADMIN"); // 'ADMIN' capital letters
+            admin.setType("ADMIN"); 
             userRepository.save(admin);
             System.out.println("✅ Default Admin User Created Successfully!");
         }
@@ -32,8 +32,8 @@ public class DataInitializer implements CommandLineRunner {
         if (userRepository.findByUsername("doctor").isEmpty()) {
             User doctor = new User();
             doctor.setUsername("doctor");
-            doctor.setPassword(passwordEncoder.encode("doctor123")); // password
-            doctor.setType("DOCTOR"); // 'DOCTOR' capital letters
+            doctor.setPassword(passwordEncoder.encode("doctor123")); 
+            doctor.setType("DOCTOR"); 
             userRepository.save(doctor);
             System.out.println("✅ Default Doctor User Created Successfully!");
         }

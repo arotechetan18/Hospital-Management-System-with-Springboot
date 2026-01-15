@@ -58,7 +58,7 @@ public class Appointment {
 
 	public Appointment() {
 		super();
-		// TODO Auto-generated constructor stub
+	
 		
 		
 	}

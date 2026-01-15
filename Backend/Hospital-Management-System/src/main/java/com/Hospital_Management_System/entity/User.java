@@ -35,8 +35,8 @@ public class User {
 		this.type = type;
 	}
 	private String username;
-    private String password; // BCrypt encoded password asava
-    private String type;     // 'Admin' ki 'Doctor'
+    private String password; 
+    private String type;     
     
-    // Getters and Setters
+    
 }

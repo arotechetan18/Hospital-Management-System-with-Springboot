@@ -16,9 +16,11 @@ import { UpdatePatientComponent } from './update-patient/update-patient.componen
 import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { AuthGuard } from './auth-guard.service';
 import { RoleGuard } from './role-guard.service';
+import { AiChatComponent } from './ai-chat/ai-chat.component';
 
 const routes: Routes = [
   { path: '', component: HomepageComponent },
+  {path:'aichat',component:AiChatComponent},
   { path: 'login', component: LoginComponent },
 
   // --- ADMIN SECTION ---

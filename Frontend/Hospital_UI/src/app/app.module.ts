@@ -19,6 +19,7 @@ import { ViewPatientComponent } from './view-patient/view-patient.component';
 import { UpdateMedicineComponent } from './update-medicine/update-medicine.component';
 
 import { LoginComponent } from './login/login.component';
+import { AiChatComponent } from './ai-chat/ai-chat.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { LoginComponent } from './login/login.component';
     ViewPatientComponent,
     UpdateMedicineComponent,
     LoginComponent,
+    AiChatComponent,
   
 
   ],

@@ -28,7 +28,7 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    // FAKT EKACH authenticationManager method theva
+    
     @Bean
     public AuthenticationManager authenticationManager(HttpSecurity http) throws Exception {
         AuthenticationManagerBuilder authenticationManagerBuilder = 
@@ -48,8 +48,8 @@ public class SecurityConfig {
             .csrf(csrf -> csrf.disable())
             .cors(cors -> cors.disable())
             .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/api/**").permitAll()  // login POST
-                .anyRequest().authenticated()               // बाकी secure
+                .requestMatchers("/api/**").permitAll()  
+                .anyRequest().authenticated()              
             );
 
         return http.build();

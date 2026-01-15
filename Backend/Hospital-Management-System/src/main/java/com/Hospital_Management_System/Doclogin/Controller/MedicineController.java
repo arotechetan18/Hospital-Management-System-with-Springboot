@@ -32,7 +32,7 @@ public class MedicineController {
 
 	public MedicineController(MedicineRepository medicineRepository) {
 		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 	
 	@PostMapping("/medicines")

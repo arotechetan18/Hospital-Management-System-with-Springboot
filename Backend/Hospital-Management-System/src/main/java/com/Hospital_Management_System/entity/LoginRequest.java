@@ -16,5 +16,5 @@ public class LoginRequest {
 		this.password = password;
 	}
 	private String password;
-    // Getters and Setters
+    
 }
