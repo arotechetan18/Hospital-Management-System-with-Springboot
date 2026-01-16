@@ -1,6 +1,6 @@
 export class Appointment {
 
-    id:number=0;
+    id?:number;
     name:string="";
     age:string="";
     symptoms:string="";

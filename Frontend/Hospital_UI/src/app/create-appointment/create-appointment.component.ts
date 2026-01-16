@@ -13,14 +13,18 @@ export class CreateAppointmentComponent {
   appointment:Appointment=new Appointment();
 
   constructor(private appointmentService:AppointmentService,private router:Router){}
+saveAppointment(){
+  console.log("Role:", localStorage.getItem('role'));
 
-  saveAppointment(){
+  this.appointmentService.createAppointment(this.appointment).subscribe({
+    next: res => {
+      console.log("Saved", res);
+      this.router.navigate(['/appointmentlist']);
+    },
+    error: err => console.error(err)
+  });
+}
 
-    this.appointmentService.createAppointment(this.appointment).subscribe(data=>{
-      console.log(data);
-   this.goToappointment();
-    })
-  }
 
   onSubmit(){
     this.saveAppointment();
